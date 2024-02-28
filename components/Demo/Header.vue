@@ -8,9 +8,8 @@
     <b>Nuxt3</b> template
   </div>
 
-  <div class="w-1/3 rounded-xl bg-green-500 px-4 py-2">
+  <div class="w-1/3 rounded-xl bg-green-400 dark:bg-green-500 px-4 py-2 mt-4">
     <div class="pt-4">
-      <b>Contains:</b>
       <ul class="text-sm">
         <li>SASS / SCSS</li>
         <li>Tailwind</li>
