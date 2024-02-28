@@ -1,0 +1,25 @@
+
+$fontSize:0.8rem;
+
+// Button
+$buttonPadding:0.8em 1.2em;
+.p-button-label{
+  font-weight: 400;
+}
+
+// Dialog
+$dialogContentPadding:0 1.5rem 0rem 1.5rem; // remove bottom margin from content
+$dialogFooterPadding: 0.5rem 1.5rem 1.5rem 1.5rem; // add small margin on top
+
+// removes inline spacing from button
+.p-dialog .p-dialog-footer button {margin: 0;}
+
+// calendar
+// adds compatibility with tailwind text-center
+.p-calendar.text-center input {
+  text-align: center;
+}
+
+.p-calendar.text-xs > input {
+  font-size: 0.75rem;
+}
