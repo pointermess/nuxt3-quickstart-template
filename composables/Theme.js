@@ -12,20 +12,31 @@ let theme = {
 
     isDarkLayout: computed(() => currentTheme.value == 0),
 
-    toggleTheme: () => {
+    setDarkTheme: () => {
+        if ($pv == null) return;
+        $pv.changeTheme(themes[1], themes[0], 'theme-link', () => {});
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        currentTheme.value = 0;
+        localStorage.setItem('preferred-theme', 'light');
+    },
+
+    setLightTheme: () => {
         if ($pv == null) return;
 
-        let otherTheme = themes[(currentTheme.value-1)*-1];
-        $pv.changeTheme(themes[currentTheme.value], otherTheme, 'theme-link', () => {});
-        if (otherTheme.indexOf('dark') == -1){
-            document.documentElement.classList.add('light');
-            document.documentElement.classList.remove('dark');
-        } else {
-            document.documentElement.classList.remove('light');
-            document.documentElement.classList.add('dark');
-        }
+        $pv.changeTheme(themes[0], themes[1], 'theme-link', () => {});
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+        currentTheme.value = 1;
+        localStorage.setItem('preferred-theme', 'dark');
+    },
 
-        (currentTheme.value + 1 == 1) ? currentTheme.value = 1 : currentTheme.value = 0;
+
+    toggleTheme: () => {
+        if (currentTheme == 0)
+            theme.setLightTheme();
+        else
+            theme.setDarkTheme();
     }
 }
 
