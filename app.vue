@@ -22,12 +22,6 @@
 </template>
 <script setup>
 const $pv = usePrimeVue();
-const $theme = useTheme();
-let currentTheme = 0;
-let themes = [
-    'timetracker-dark',
-    'timetracker-light'
-]
 
 useHead({
   link: [
