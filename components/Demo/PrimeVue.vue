@@ -4,6 +4,9 @@ const $theme = useTheme();
 const test = () => {
   $theme.toggleTheme()
 }
+
+const checked = ref(true);
+const chips = ref(['test']);
 </script>
 
 <template>
@@ -22,6 +25,13 @@ const test = () => {
         <Button label="Danger" severity="danger" />
         <Button label="Contrast" severity="contrast" />
       </div>
+
+      <Divider />
+
+      asdasd
+      <Checkbox label="test" v-model="checked" :binary="true" />
+      <Chips v-model="chips" />
+
     </div>
   </div>
 </template>
