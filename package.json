@@ -12,7 +12,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.10.1",
     "autoprefixer": "^10.4.16",
-    "nuxt-primevue": "^0.2.2",
+    "nuxt-primevue": "^0.3.1",
     "postcss": "^8.4.32",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2"
@@ -23,6 +23,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@nuxtjs/color-mode": "^3.3.2",
     "nuxt": "^3.10.3",
+    "primevue": "^3.49.1",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
   }
