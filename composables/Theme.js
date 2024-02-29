@@ -33,7 +33,7 @@ let theme = {
 
 
     toggleTheme: () => {
-        if (currentTheme == 0)
+        if (currentTheme.value == 0)
             theme.setLightTheme();
         else
             theme.setDarkTheme();
