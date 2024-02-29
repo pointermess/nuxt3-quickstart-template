@@ -2,13 +2,16 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    'nuxt-primevue',
     '@nuxtjs/tailwindcss',
+    'nuxt-primevue',
     '@nuxtjs/color-mode'
   ],
   primevue: {
-    usePrimeVue: true
+    usePrimeVue: true,
   },
+  css: [
+    '@/assets/css/global.scss',
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -38,7 +41,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  //css: ['primevue/resources/themes/aura-dark-green/theme.css'],
   build: {
     transpile: [
       '@fortawesome/vue-fontawesome',
