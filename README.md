@@ -26,6 +26,12 @@ install all dependencies
 yarn install
 ```
 
+if you want to upgrade nuxt
+
+```
+yarn nuxi upgrade
+```
+
 and run it:
 
 ```
